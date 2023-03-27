@@ -1,12 +1,17 @@
 import React,{useContext} from 'react'
 import Filter from '../components/Filter'
 import SingleProduct from '../components/SingleProduct'
-import { CartState } from '../context/Context'
+import { CartContext } from '../context/Context'
+import Context from '../context/Context'
+import { faker } from '@faker-js/faker';
+import ReducerBasic from '../context/Reducer'
 
 
 const Shop = () => {
-  const {state : {products}} = CartState()
-  console.log(products,"shop-state")
+  const {prod} = useContext(CartContext)
+  
+  console.log(prod,"value")
+
   return (
     <div className='flex '>
       <article>
@@ -15,7 +20,7 @@ const Shop = () => {
     <div className='flex flex-row flex-wrap  md:flex-1 justify-evenly' >
 
       {/* <article className="mt-5 grid grid-cols-3 gap-10"> */}
-      {products.map((prod) => {
+      {prod.map((prod) => {
        return (        
         <SingleProduct prod ={prod} key={prod.id}/>
         )
