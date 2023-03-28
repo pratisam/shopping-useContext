@@ -1,16 +1,4 @@
-// import { useReducer } from 'react';
-// export const cartReducer = (state, action) => {
-//     switch(action.type){
-//         case "AddtoCart" :
-//             return {...state, cart:[...state.cart,{...action.payload, qty:1}]}
-//          case "RemoveCart" :
-//             return {...state,cart:state.cart.filter(cart=>cart.id!==action.payload.id)}
-        
-//         default:
-//             return state;
-//     }
-// }
-import { useState,useReducer,createContext } from "react"
+import { useReducer,createContext } from "react"
 export const ReducerContext = createContext();
 const defaultState = {
     cart:[]

@@ -9,6 +9,7 @@ import {
 } from "@material-tailwind/react";
 import { ReducerContext } from '../context/Reducer';
 const SingleCart = ({prod}) => {
+    // eslint-disable-next-line
 const { state, dispatch  } = useContext(ReducerContext)
 
     console.log(prod,"prod from cart")
