@@ -15,7 +15,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Shop />} />
                 <Route path="/cart" element={<Cart />} />
-              </Routes>
+              </Routes>     
             </Router>
         </ReducerBasic>
       </Context>

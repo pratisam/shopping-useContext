@@ -16,15 +16,37 @@ const defaultState = {
     cart:[]
 }
 const reducer = (state, action) => {
+    console.log(action,"action")
     switch (action.type) {
       case "ADD_TO_CART":
         return {
           ...state,
-          cart: [...state.cart, action.payload],
+          cart: [...state.cart, { ...action.payload, qty: 1 }],
         };
+      case "REMOVE_FROM_CART":
+        return {
+            ...state,
+            cart:[ ...state.cart.filter((c) => c.id !== action.payload.id)],
+          };
+          case "UPDATE_CART":
+            return {
+              ...state,
+              cart: state.cart.map((c) =>
+                c.id === action.payload.id ? { ...c, qty: c.qty + 1 } : c
+              ),
+            };
+            case "REDUCE_FROM_CART":
+                return {
+                  ...state,
+                  cart: state.cart.map((c) =>
+                    c.id === action.payload.id ? { ...c, qty: c.qty - 1 } : c
+                  ),
+                };
+        //REDUCE_FROM_CART
       default:
         return state;
     }
+      
   };
 const ReducerBasic =({children}) => {
 

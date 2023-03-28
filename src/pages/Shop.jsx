@@ -2,9 +2,6 @@ import React,{useContext} from 'react'
 import Filter from '../components/Filter'
 import SingleProduct from '../components/SingleProduct'
 import { CartContext } from '../context/Context'
-import Context from '../context/Context'
-import { faker } from '@faker-js/faker';
-import ReducerBasic from '../context/Reducer'
 
 
 const Shop = () => {
