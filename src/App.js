@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import Context from "./context/Context";
-import ReducerBasic , { ReducerContext } from "./context/Reducer";
+import ReducerBasic from "./context/Reducer";
 function App() {
   return (
     <div>

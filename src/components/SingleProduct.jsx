@@ -13,6 +13,7 @@ import { ReducerContext } from '../context/Reducer';
 
 const SingleProduct = ({ prod }) => {
     const[quantity,setQuantity] = useState(0)
+    // eslint-disable-next-line
     const { state, dispatch  } = useContext(ReducerContext)
 
     const AddToCart = () => {

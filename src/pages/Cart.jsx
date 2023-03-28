@@ -3,10 +3,9 @@ import {ReducerContext} from '../context/Reducer'
 import SingleCart from './SingleCart';
 
 const Cart = () => {
+  // eslint-disable-next-line
   const { state, dispatch  } = useContext(ReducerContext)
   console.log(state,"state from cart")
-  
-  
   return (
     <div className='flex flex-row flex-wrap  md:flex-1 justify-evenly' >
 
